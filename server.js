@@ -4,10 +4,13 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-
+var mongoose = require('mongoose');
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var templateRouter = require('./routes/templateRoute');
+
+var connString = 'mongodb://localhost/mentorish';
+mongoose.connect(connString);
 
 var app = express();
 

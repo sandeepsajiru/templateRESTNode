@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var itemSchema = new mongoose.Schema({
+var templateItemSchema = new mongoose.Schema({
     title: String,
     author : String,
     created_at: Date,
@@ -8,7 +8,7 @@ var itemSchema = new mongoose.Schema({
     deleted : Boolean
 });
 
-itemSchema.pre('save', function(next) {
+templateItemSchema.pre('save', function(next) {
     // get the current date
     var currentDate = new Date();
 
@@ -24,4 +24,4 @@ itemSchema.pre('save', function(next) {
     next();
 });
 
-module.exports = mongoose.model('item', itemSchema);
+module.exports = mongoose.model('templateItem', templateItemSchema);
