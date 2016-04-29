@@ -1,0 +1,8 @@
+node_modules/
+.bower-cache/
+.bower-registry/
+.bower-tmp/
+.idea/
+*.sublime-project
+*.sublime-workspace
+/client/styles/*.css
